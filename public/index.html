@@ -8,50 +8,86 @@
         <meta name="description" content="Chopfees">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,500,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.2/css/mdb.min.css" />
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
         <main id="main">
             <div class="nav-wrap">
-                <nav id="main-nav" class="nav">
-                    <div class="logo">
-                        <a href="/"><img class="nav-logo-img" src="images/chopfees_logo_black.png" alt=""></a>
-                    </div>
-                    <div class="links">
-                        <a href="/public/about.html">About Us</a>
-                        <a href="/public/faq.html">FAQ</a>
-                    </div>
-                </nav>
-            </div>
-            <div aria-label="Mobile Page menu" class="mobile-menu-wrap">
-                <div class="nav-logo">
-                    <a class="mobile-logo" href="/"><img class="mobile-logo-logo-img" src="images/chopfees_logo_white.png"></a>
-                </div>
-                <a href="javascript:void(0);" class="mobile-menu-btn-open"></a>
-                <div class="mobile-menu hide">
-                    <div class="mobile-menu-logo">
-                        <a class="mobile-menu-logo-link" href="/"><img class="mobile-logo-logo-img" src="images/chopfees_logo_white.png"></a>
-                    </div>
-                    <a href="javascript:void(0);" class="mobile-menu-btn-close"></a>
-                    <div class="menu-holder">
-                        <ul class="menu">
-                            <li><a class="menu-link about-us" href="/public/about.html">About Us</a></li>
-                            <li><a class="menu-link faq" href="/public/faq.html">Contact</a></li>
+                <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="./index.html">
+                        <img src="/public/images/chopfees_logo_white.png" alt="">
+                    </a>
+                    
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                        <ul class="navbar-nav">
+                            <li id="home-link" class="nav-item">
+                                <a class="nav-link" href="./index.html">Home</a>
+                            </li>
+                            <li id="about-link" class="nav-item">
+                                <a class="nav-link" href="./about.html">About Us</a>
+                            </li>
+                            <li id="faq-link" class="nav-item">
+                                <a class="nav-link" href="./faq.html">FAQ</a>
+                            </li>
                         </ul>
                     </div>
-                </div>
+                </nav>
             </div>
 
 
             <!-- Hero Module -->
             <header class="hero">
-
-
+                <h1 style="padding-bottom:0">You're paying too much for your merchant processing.</h1>
+                <h1 style="font-weight:600; padding-top:0em">We can help.</h1>
+                
             </header>
 
             <!-- Inquiry Form -->
-            <section class="inquiry-form">
-
+            <section class="inquiry">
+                
+                <div class="sign-up">
+                    <h1>Inquire Now</h1>
+                    <div class="inquiry-form">
+                        <form method="post">
+                            <div class="form-row">
+                                <div class="col-md-12">
+                                    <p>YOUR INFORMATION</p>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="firstName" class="form-control" id="firstName" placeholder="First Name *">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="lastName" class="form-control" id="lastName" placeholder="Last Name *">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <input type="companyName" class="form-control" id="companyName" placeholder="Company Name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="email" class="form-control" id="email" placeholder="Email *">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="phone" class="form-control" id="phone" placeholder="Phone *">
+                                </div>
+                                <div class="col-md-12">
+                                    <p>UPLOAD MERCHANT STATEMENT</p>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="box">
+                                        <input type="file" name="file-7[]" id="file-7" class="inputfile inputfile-6" data-multiple-caption="{count} files selected" multiple />
+                                        <label for="file-7"><span></span> <strong>Choose a file&hellip;</strong></label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                        </form>
+                    </div>
+                </div>
             </section>
 
             <section class="info">
@@ -76,6 +112,7 @@
             
 
         </main>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.2/js/mdb.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
