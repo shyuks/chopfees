@@ -397,6 +397,13 @@ a:hover {
     }
 }
 
+@media (min-width: 768px) {
+    .hero {
+        background: url(/public/images/hero.jpg) 80% 100% no-repeat;
+        background-size: cover;
+    }
+}
+
 .hero h1 {
     color: white;
     text-align: center;
@@ -625,10 +632,20 @@ a:hover {
     padding: 1em 0 3em
 }
 
+.emailAddress a {
+    color: #9B9B9B
+}
+
 .endLinks {
     margin: 0 .5em;
-    padding: 3em 5em 1em;
+    padding: 3em 2em 1em;
     border-top: 1px solid #9B9B9B;
+}
+
+@media (min-width: 375px) {
+    .endLinks {
+        padding: 3em 2em 1em;
+    }
 }
 
 .privacyLink a,
