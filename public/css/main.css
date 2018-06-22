@@ -260,7 +260,7 @@ body {
     font-family: "Work Sans", sans-serif;
     color: #3E3E4A;
     font-size: 14px;
-    line-height: 1.5em;
+    line-height: 1.75em;
     min-width: 320px
 }
 
@@ -509,4 +509,129 @@ a:hover {
     font-weight: 700;
     height: 3.5em;
     border-radius: 0;
+}
+
+/* Info Section */
+
+.info {
+    padding: 2em 0em;
+    text-align: center;
+    background: #ffffff
+}
+
+.infoImage {
+    background: url(../images/infoMobile.jpg) center bottom no-repeat;
+    background-size: cover;
+    height: 27em
+}
+
+.infoText {
+    padding: 3em 2em
+}
+
+.info h1 {
+    font-size: 24px
+}
+
+.info h2 {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 2em 0 .5em;
+    margin-bottom: 0;
+    line-height: 1.5em
+}
+
+.info p {
+    font-weight: 300;
+    padding: 0;
+    margin-bottom: 0
+}
+
+/* Steps Section */
+
+.steps {
+    text-align: center;
+    padding: 3em 1em
+}
+
+.steps h1 {
+    font-size: 24px;
+    padding: 0 2em 2em
+}
+
+.steps h3 {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 1em;
+    margin: 0
+}
+
+.steps p {
+    font-weight: 300;
+    padding: 0 2em;
+}
+
+.step {
+    background: #ffffff;
+    height: 15em;
+    margin-bottom: 1em
+}
+
+.topColor {
+    height: .5em;
+}
+
+.step1Top {
+    background: #5AB2E0
+}
+
+.step2Top {
+    background: #50D2C2
+}
+
+.step3Top {
+    background: #9793FE
+}
+
+.step4Top {
+    background: #FFB258
+}
+
+/* Footer Section */
+
+.footer {
+    padding: 3em 0;
+    color: #9B9B9B;
+    background: #4A4A4A;
+    text-align: center
+}
+
+.support h4 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 1em
+}
+
+.support p {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0
+}
+
+.emailAddress {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 1em 0 3em
+}
+
+.endLinks {
+    margin: 0 .5em;
+    padding: 3em 5em 1em;
+    border-top: 1px solid #9B9B9B;
+}
+
+.privacyLink a,
+.termsLink a {
+    color: #9B9B9B
 }
