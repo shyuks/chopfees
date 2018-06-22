@@ -321,21 +321,24 @@ a:hover {
 @media (min-width: 768px) {
     .navbar {
         display: flex;
+        background-color: #5AB2E0 !important;
+        position: relative !important;
+        padding: 3em 6em
     }
 }
 
-.navbar-light .navbar-toggler {
+.navbar .navbar-toggler {
     border: none;
     padding: .2em
 }
 
 @media (min-width: 375px) {
-    .navbar-light .navbar-toggler {
+    .navbar .navbar-toggler {
         padding: .4em
     }
 }
 
-.navbar-light .navbar-toggler-icon {
+.navbar .navbar-toggler-icon {
     background-image: url(../images/menu_white.png) !important;
     width: 1em;
     height: .5em
@@ -362,6 +365,12 @@ a:hover {
     }
 }
 
+@media (min-width: 756px) {
+    .navbar-brand img {
+        width: 150px;
+    }
+}
+
 .nav-item {
     padding: 5px 0px 5px 10px;
 }
@@ -373,12 +382,13 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-    #links {
-        text-align: right
-    }
-
     #home-link {
         display: none
+    }
+
+    .nav-items a {
+        font-size: 16px;
+        font-weight: 600
     }
 }
 
@@ -401,6 +411,8 @@ a:hover {
     .hero {
         background: url(/public/images/hero.jpg) 80% 100% no-repeat;
         background-size: cover;
+        height: 80vh;
+        padding: 0
     }
 }
 
@@ -419,6 +431,12 @@ a:hover {
 @media (min-width: 400px) {
     .hero h1 {
         padding: 2em;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero h1 {
+        text-align: left;
     }
 }
 
