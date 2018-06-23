@@ -499,7 +499,15 @@ a:hover {
 }
 
 .callToAction {
-    display: none
+    display: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    padding-bottom: 2em
+}
+
+.callToAction p {
+    margin: 0
 }
 
 @media (min-width: 768px) {
@@ -516,6 +524,13 @@ a:hover {
 .inquiry {
     padding: 3em 0em;
     text-align: center
+}
+
+@media (min-width: 1024px) {
+    .inquiry {
+        width: 60%;
+        margin: 0 auto
+    }
 }
 
 .inquiry h1 {
@@ -605,6 +620,17 @@ a:hover {
     font-weight: 700;
     height: 3.5em;
     border-radius: 0;
+}
+
+@media (min-width: 768px) {
+    .submitButtonBox {
+        width: 100%
+    }
+
+    .submitButtonBox .btn {
+        width: 15em;
+        margin: 0 auto
+    }
 }
 
 /* Info Section */
