@@ -383,7 +383,7 @@ a:hover {
 
 @media (min-height: 800px) {
     .hero {
-        height: 90vh;
+        height: 80vh;
     }
 }
 
@@ -402,9 +402,15 @@ a:hover {
     padding: 3em 2em
 }
 
+@media (min-width: 375px) {
+    .heroText {
+        padding: 5em 3em
+    }
+}
+
 @media (min-width: 400px) {
     .heroText {
-        padding: 2em;
+        padding: 6em 3em;
     }
 }
 
