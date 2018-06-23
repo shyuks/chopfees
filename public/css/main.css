@@ -653,6 +653,14 @@ a:hover {
     }
 }
 
+@media (min-width: 768px) {
+    .infoImage {
+        background: url(../images/info.jpg) center bottom no-repeat;
+        background-size: cover;
+        height: 30em
+    }
+}
+
 .infoText {
     padding: 3em 2em
 }
