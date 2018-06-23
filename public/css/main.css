@@ -399,18 +399,18 @@ a:hover {
 .heroText {
     color: white;
     text-align: center;
-    padding: 3em 2em
+    padding: 3em 1em
 }
 
 @media (min-width: 375px) {
     .heroText {
-        padding: 5em 3em
+        padding: 4em 3em
     }
 }
 
 @media (min-width: 400px) {
     .heroText {
-        padding: 6em 3em;
+        padding: 4.5em 3em;
     }
 }
 
@@ -538,9 +538,15 @@ a:hover {
 }
 
 .infoImage {
-    background: url(../images/infoMobile.jpg) center bottom no-repeat;
+    background: url(../images/infoMobile.jpg) left center no-repeat;
     background-size: cover;
-    height: 27em
+    height: 23em
+}
+
+@media (min-width: 375px) {
+    .infoImage {
+        height: 28em
+    }
 }
 
 .infoText {
@@ -592,7 +598,8 @@ a:hover {
 .step {
     background: #ffffff;
     height: 15em;
-    margin-bottom: 1em
+    margin: 1em;
+    padding: 0 !important
 }
 
 .topColor {
