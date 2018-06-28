@@ -708,13 +708,13 @@ a:hover {
 .aboutInfo {
     text-align: left;
     background: #ffffff;
-    padding: 3em 1em;
-    height: 30em
+    padding: 3em 1em
 }
 
 @media (min-width: 768px) {
     .aboutInfo {
-        padding: 3em 9.5%
+        padding: 5% 9.5%;
+        height: 30em
     }
 }
 
