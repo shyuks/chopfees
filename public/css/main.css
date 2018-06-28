@@ -1,0 +1,867 @@
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+    display: block
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0
+}
+
+figcaption,
+figure,
+main {
+    display: block
+}
+
+figure {
+    margin: 1em 40px
+}
+
+hr {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted
+}
+
+b,
+strong {
+    font-weight: inherit
+}
+
+b,
+strong {
+    font-weight: bolder
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+dfn {
+    font-style: italic
+}
+
+mark {
+    background-color: #ff0;
+    color: #000
+}
+
+small {
+    font-size: 80%
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -0.25em
+}
+
+sup {
+    top: -0.5em
+}
+
+audio,
+video {
+    display: inline-block
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0
+}
+
+img {
+    border-style: none
+}
+
+svg:not(:root) {
+    overflow: hidden
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0
+}
+
+button,
+input {
+    overflow: visible
+}
+
+button,
+select {
+    text-transform: none
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+fieldset {
+    padding: 0.35em 0.75em 0.625em
+}
+
+legend {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal
+}
+
+progress {
+    display: inline-block;
+    vertical-align: baseline
+}
+
+textarea {
+    overflow: auto
+}
+
+[type="checkbox"],
+[type="radio"] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+details,
+menu {
+    display: block
+}
+
+summary {
+    display: list-item
+}
+
+canvas {
+    display: inline-block
+}
+
+template {
+    display: none
+}
+
+[hidden] {
+    display: none
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit
+}
+
+.group:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+body {
+    position: relative;
+    background: #F8F8F9;
+    font-family: "Work Sans", sans-serif;
+    color: #3E3E4A;
+    font-size: 14px;
+    line-height: 1.75em;
+    min-width: 320px
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 16px
+    }
+}
+
+#main {
+    overflow: hidden
+}
+
+h1 {
+    font-family: "Work Sans", sans-serif;
+    font-size: 28px;
+    line-height: 1.5em;
+    font-weight: 300;
+    margin: 0;
+    padding: 0
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 38px
+    }
+}
+
+p {
+    margin-bottom: 1em;
+    font-size: 14px
+}
+
+@media (min-width: 768px) {
+    p {
+        font-size: 16px;
+        margin-bottom: 1em
+    }
+}
+
+a {
+    -webkit-transition: all 200ms ease-in-out 0ms;
+    transition: all 200ms ease-in-out 0ms
+}
+
+a:hover {
+    -webkit-transition: all 200ms ease-in-out 0ms;
+    transition: all 200ms ease-in-out 0ms
+}
+
+/* Navbar */
+
+.navbar {
+    background-color: #B6B6B8 !important;
+    display: inline-block;
+}
+
+.navbar .navbar-toggler {
+    border: none;
+    padding: .2em
+}
+
+@media (min-width: 375px) {
+    .navbar .navbar-toggler {
+        padding: .4em
+    }
+}
+
+.navbar .navbar-toggler-icon {
+    background-image: url(../images/menu_white.png) !important;
+    width: 1em;
+    height: .5em
+}
+
+@media (min-width: 375px) {
+    .navbar-light .navbar-toggler-icon {
+        width: 1.25em;
+        height: .75em
+    }
+}
+
+.navbar-brand {
+    width: 50%
+}
+
+.navbar-brand img {
+    width: 75%
+}
+
+@media (min-width: 375px) {
+    .navbar-brand img {
+        width: 65%
+    }
+}
+
+.nav-item {
+    padding: 5px 0px 5px 10px;
+}
+
+.nav-item a {
+    font-size: 18px;
+    font-weight: 600;
+    color: white !important;
+}
+
+@media (min-width: 768px) {
+    .mobile-nav {
+        display: none
+    }
+}
+
+/* Desktop Nav */
+
+@media (max-width: 767px) {
+    .desktopNav {
+        display: none
+    }
+}
+
+.desktopLogo {
+    padding: 1em 3em 0
+}
+
+.desktopLogo img {
+    background: url(../images/chopfees_logo_white.png);
+    width: auto;
+    height: 30px
+}
+
+@media (min-width: 1024px) {
+    .desktopLogo {
+        padding: 1em 5em 0
+    }
+
+    .desktopLogo img {
+        height: 40px
+    }
+}
+
+@media (min-width: 1200px) {
+    .desktopLogo {
+        padding: 1em 10em 0
+    }
+}
+
+.desktopLinks {
+    padding: 1em 3em 0;
+    font-weight: 600
+}
+
+.desktopLinks a {
+    color: white
+}
+
+@media (min-width: 1024px) {
+    .desktopLinks {
+        padding: 1em 5em 0
+    }
+}
+
+@media (min-width: 1200px) {
+    .desktopLinks {
+        padding: 1em 10em 0
+    }
+}
+
+/* Hero */
+
+.hero {
+    padding-top: 50px;
+    background: url(/public/images/heroMobile.jpg) center bottom no-repeat;
+    background-size: cover;
+    height: 100vh;
+    max-width: 100%;
+    position: relative
+}
+
+@media (min-height: 800px) {
+    .hero {
+        height: 80vh;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero {
+        background: url(/public/images/hero.jpg) 80% 100% no-repeat;
+        background-size: cover;
+        height: 100vh
+    }
+}
+
+@media (min-width: 2000px) {
+    .hero {
+        background: url(/public/images/hero.jpg) right top no-repeat;
+        background-size: cover
+    }
+}
+
+.heroText {
+    color: white;
+    text-align: center;
+    padding: 3em 1em
+}
+
+@media (min-width: 375px) {
+    .heroText {
+        padding: 4em 3em
+    }
+}
+
+@media (min-width: 400px) {
+    .heroText {
+        padding: 4.5em 3em;
+    }
+}
+
+@media (min-width: 768px) {
+    .heroText {
+        text-align: left;
+        font-size: 38px;
+        font-weight: 300;
+        padding: 2.5em 0 0 1em
+    }
+}
+
+@media (min-width: 1024px) {
+    .heroText {
+        padding: 4.5em 0 0 2em
+    }
+}
+
+@media (min-width: 1200px) {
+    .heroText {
+        padding: 4em 3em 0 4.25em
+    }
+}
+
+.callToAction {
+    display: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    padding-bottom: 2em
+}
+
+.callToAction p {
+    margin: 0
+}
+
+@media (min-width: 768px) {
+    .callToAction {
+        display: block;
+        text-align: center;
+        position: absolute;
+        bottom: 0
+    }
+}
+
+/* Inquiry Form */
+
+.inquiry {
+    padding: 3em 0em;
+    text-align: center
+}
+
+@media (min-width: 1024px) {
+    .inquiry {
+        width: 60%;
+        margin: 0 auto
+    }
+}
+
+.inquiry h1 {
+    padding: 0em 1em
+}
+
+.inquiry-form {
+    padding: 0em 2em
+}
+
+.inquiry-form p {
+    text-align: left;
+    padding: 1.5em 0em;
+    margin: 0 auto
+}
+
+.inquiry-form input {
+    font-family: Work Sans;
+    font-size: 14px;
+    font-weight: 200;
+    height: 4em;
+}
+
+.form-row p {
+    text-align: left
+}
+
+.form-group {
+    margin-bottom: .5em
+}
+
+/* Form input */
+
+.inputBox {
+    text-align: left;
+    padding-bottom: 1.5em
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile label {
+    max-width: 100%;
+    height: 100%;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden
+}
+
+.inputfile + label span,
+.inputfile + label strong {
+    font-size: 12px;
+    padding: .5em 1em
+}
+
+.inputfile + label span {
+    width: 150px;
+    min-height: 2em;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: top;
+    font-weight: 200
+}
+
+.inputfile + label strong {
+    color: white;
+    background-color: #B6B6B8;
+    display: inline-block;
+    font-weight: 600
+}
+
+.form-btn {
+    font-family: Work Sans;
+    background-color: #50D2C2;
+    border: none;
+    font-weight: 700;
+    height: 3.5em;
+    border-radius: 0;
+}
+
+@media (min-width: 768px) {
+    .submitButtonBox {
+        width: 100%
+    }
+
+    .submitButtonBox .btn {
+        width: 15em;
+        margin: 0 auto
+    }
+}
+
+/* Info Section */
+
+.info {
+    margin: 2em 0em;
+    text-align: center;
+    background: #ffffff
+}
+
+.infoImage {
+    background: url(../images/infoMobile.jpg) left center no-repeat;
+    background-size: cover;
+    height: 23em
+}
+
+@media (min-width: 375px) {
+    .infoImage {
+        height: 28em
+    }
+}
+
+@media (min-width: 768px) {
+    .infoImage {
+        background: url(../images/info.jpg) center bottom no-repeat;
+        background-size: cover;
+        height: 30em
+    }
+}
+
+.infoText {
+    padding: 3em 2em
+}
+
+@media (min-width: 768px) {
+    .infoText {
+        padding: 5em 10%
+    }
+}
+
+@media (min-width: 1200px) {
+    .infoText {
+        padding: 5em 20%
+    }
+}
+
+.info h1 {
+    font-size: 24px
+}
+
+@media (min-width: 768px) {
+    .info h1 {
+        font-size: 32px
+    }
+}
+
+.info h2 {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 2em 0 .5em;
+    margin-bottom: 0;
+    line-height: 1.5em
+}
+
+.info p {
+    font-weight: 300;
+    padding: 0;
+    margin-bottom: 0
+}
+
+/* Steps Section */
+
+.steps {
+    text-align: center;
+    padding: 3em 1em
+}
+
+.steps h1 {
+    font-size: 24px;
+    padding: 0 2em 2em
+}
+
+@media (min-width: 768px) {
+    .steps h1 {
+        font-size: 32px
+    }
+}
+
+.steps h3 {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 1em;
+    margin: 0
+}
+
+.steps p {
+    font-weight: 300;
+    padding: 0 2em;
+}
+
+@media (min-width: 768px) {
+    .steps p {
+        font-size: 14px;
+        padding: 0 1em
+    }
+}
+
+.step {
+    background: #ffffff;
+    height: 15em;
+    margin: 1em;
+    padding: 0 !important
+}
+
+@media (min-width: 992px) {
+    .step {
+        flex: 0 0 20%;
+        max-width: 20%;
+        height: auto
+    }
+}
+
+.topColor {
+    height: .5em
+}
+
+.step1Top {
+    background: #5AB2E0
+}
+
+.step2Top {
+    background: #50D2C2
+}
+
+.step3Top {
+    background: #9793FE
+}
+
+.step4Top {
+    background: #FFB258
+}
+
+/* Footer Section */
+
+.footer {
+    padding: 3em 0;
+    color: #9B9B9B;
+    background: #4A4A4A;
+    text-align: center
+}
+
+@media (min-width: 768px) {
+    .footer {
+        text-align: left
+    }
+}
+
+.contactSection {
+    padding-bottom: 3em
+}
+
+.contactSection:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 82%; /* Change this to whatever width you want. */
+    padding: 1.5em; /* This creates some space between the element and the border. */
+    border-bottom: 1px solid #9B9B9B;; /* This creates the border. Replace black with whatever color you want. */
+}
+
+.support h4 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 1em
+}
+
+.support p {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0
+}
+
+.emailAddress {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300
+}
+
+.emailAddress a {
+    color: #9B9B9B
+}
+
+@media (min-width: 768px) {
+    .emailAddress {
+        margin: 1.5em 0
+    }
+}
+
+.endLinks {
+    margin: 0 .5em;
+    padding-bottom: 1em;
+    justify-content: center
+}
+
+@media (min-width: 768px) {
+    .endLinks {
+        margin: 0 -15px;
+        justify-content: flex-start
+    }
+}
+
+.privacyLink a,
+.termsLink a {
+    color: #9B9B9B;
+    font-size: 12px
+}
+
+.linkDivider {
+    padding: 0
+}
+
+.copyright {
+    padding: .5em 0;
+    font-size: 12px
+}
+
+@media (min-width: 768px) {
+    .copyright {
+        padding: 0;
+        text-align: right;
+        margin-left: auto !important;
+        margin-right: 9%
+    }
+}
