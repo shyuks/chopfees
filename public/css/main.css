@@ -708,21 +708,30 @@ a:hover {
 .aboutInfo {
     text-align: left;
     background: #ffffff;
-    padding: 9.5%
+    padding: 3em 1em;
+    height: 30em
+}
+
+@media (min-width: 768px) {
+    .aboutInfo {
+        padding: 3em 9.5%
+    }
 }
 
 .aboutInfo h1 {
-    font-size: 24px
+    font-size: 24px;
+    text-align: center
 }
 
 @media (min-width: 768px) {
     .aboutInfo h1 {
-        font-size: 32px
+        font-size: 32px;
+        text-align: left
     }
 }
 
 .aboutInfo h2 {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
     padding: 2em 0 .5em;
     margin-bottom: 0;
