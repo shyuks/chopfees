@@ -636,7 +636,7 @@ a:hover {
 /* Info Section */
 
 .info {
-    padding: 2em 0em;
+    margin: 2em 0em;
     text-align: center;
     background: #ffffff
 }
@@ -745,7 +745,7 @@ a:hover {
     padding: 0 !important
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
     .step {
         flex: 0 0 20%;
         max-width: 20%;
@@ -782,6 +782,25 @@ a:hover {
     text-align: center
 }
 
+@media (min-width: 768px) {
+    .footer {
+        text-align: left
+    }
+}
+
+.contactSection {
+    padding-bottom: 3em
+}
+
+.contactSection:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 82%; /* Change this to whatever width you want. */
+    padding: 1.5em; /* This creates some space between the element and the border. */
+    border-bottom: 1px solid #9B9B9B;; /* This creates the border. Replace black with whatever color you want. */
+}
+
 .support h4 {
     font-size: 16px;
     font-weight: 500;
@@ -797,27 +816,52 @@ a:hover {
 .emailAddress {
     text-align: center;
     font-size: 14px;
-    font-weight: 300;
-    padding: 1em 0 3em
+    font-weight: 300
 }
 
 .emailAddress a {
     color: #9B9B9B
 }
 
-.endLinks {
-    margin: 0 .5em;
-    padding: 3em 2em 1em;
-    border-top: 1px solid #9B9B9B;
+@media (min-width: 768px) {
+    .emailAddress {
+        margin: 1.5em 0
+    }
 }
 
-@media (min-width: 375px) {
+.endLinks {
+    margin: 0 .5em;
+    padding-bottom: 1em;
+    justify-content: center
+}
+
+@media (min-width: 768px) {
     .endLinks {
-        padding: 3em 2em 1em;
+        margin: 0 -15px;
+        justify-content: flex-start
     }
 }
 
 .privacyLink a,
 .termsLink a {
-    color: #9B9B9B
+    color: #9B9B9B;
+    font-size: 12px
+}
+
+.linkDivider {
+    padding: 0
+}
+
+.copyright {
+    padding: .5em 0;
+    font-size: 12px
+}
+
+@media (min-width: 768px) {
+    .copyright {
+        padding: 0;
+        text-align: right;
+        margin-left: auto !important;
+        margin-right: 10%
+    }
 }
