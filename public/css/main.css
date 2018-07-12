@@ -285,6 +285,12 @@ h1 {
 
 @media (min-width: 768px) {
     h1 {
+        font-size: 32px
+    }
+}
+
+@media (min-width: 1024px) {
+    h1 {
         font-size: 38px
     }
 }
@@ -375,7 +381,7 @@ a:hover {
 /* Desktop Nav */
 
 .desktopNav {
-    padding: 2%
+    padding: 2% 3%
 }
 
 @media (max-width: 767px) {
@@ -420,13 +426,23 @@ a:hover {
     .hero {
         background: url(../images/hero.jpg) 80% 100% no-repeat;
         background-size: cover;
+        height: 500px;
+        padding: 15px
     }
 }
 
-@media (min-width: 2000px) {
+@media (min-width: 1024px) {
     .hero {
-        background: url(../images/hero.jpg) right top no-repeat;
+        background: url(../images/hero.jpg) 80% 50% no-repeat;
         background-size: cover
+    }
+}
+
+@media (min-width: 1200px) {
+    .hero {
+        background: url(../images/hero.jpg) 50% 20% no-repeat;
+        background-size: cover;
+        height: 80vh
     }
 }
 
@@ -442,38 +458,52 @@ a:hover {
     }
 }
 
+@media (min-width: 768px) {
+    .heroRow {
+        padding: 0 3%;
+        top: 25%
+    }
+}
+
+@media (min-width: 1024px) {
+    .heroRow {
+        top: 30%
+    }
+}
+
+@media (min-width: 2000px) {
+    .heroRow {
+        top: 35%
+    }
+}
+
 .heroText {
     color: white;
     text-align: center;
     max-width: 90%;
-    margin: 0 auto;
+    margin: 0 auto
 }
 
-@media (min-width: 375px) {
-    .heroText {
-        /* padding: 4em 15px */
-    }
-}
-
-@media (min-width: 400px) {
-    .heroText {
-        /* padding: 4.5em 15px */
-    }
-}
 
 @media (min-width: 768px) {
     .heroText {
-        text-align: left;
+        margin: 0;
         font-size: 38px;
         font-weight: 300;
-        /* padding: 2.5em 1em 2.5em 15px */
+        text-align: left;
+        padding: 0 15px;
+        max-width: 70%
     }
 }
 
 @media (min-width: 1024px) {
     .heroText {
-        /* padding: 2.5em 2em 2.5em 15px */
+        max-width: 55%
     }
+}
+
+.heroText h1 {
+    padding-bottom: 0
 }
 
 .callToAction {
@@ -512,23 +542,28 @@ a:hover {
 
 @media (min-width: 768px) {
     .aboutHero {
-        padding-top: 1.5em;
-        background: url(../images/aboutHero.jpg) 80% 100% no-repeat;
+        background: url(../images/aboutHero.jpg) 100% 100% no-repeat;
         background-size: cover;
+    }
+}
+
+@media (min-width: 1024px) {
+    .aboutHero {
+        background: url(../images/aboutHero.jpg) 100% 80% no-repeat;
+        background-size: cover
     }
 }
 
 @media (min-width: 2000px) {
     .aboutHero {
-        background: url(../images/aboutHero.jpg) right top no-repeat;
-        background-size: cover
+        height: 50vh
     }
 }
 
 /* FAQ Page Hero */
 
 .faqHero {
-    background: url(../images/faqMobile.jpg) center top no-repeat;
+    background: url(../images/faqHero.jpg) center top no-repeat;
     background-size: cover;
     height: 24em;
     max-width: 100%;
@@ -537,16 +572,28 @@ a:hover {
 
 @media (min-width: 768px) {
     .faqHero {
-        padding-top: 1.5em;
-        background: url(../images/faqHero.jpg) 80% 100% no-repeat;
+        background: url(../images/faqHero.jpg) 50% 100% no-repeat;
+        background-size: cover;
+    }
+}
+
+@media (min-width: 1024px) {
+    .faqHero {
+        background: url(../images/faqHero.jpg) 100% 0% no-repeat;
+        background-size: cover;
+    }
+}
+
+@media (min-width: 1200px) {
+    .faqHero {
+        background: url(../images/faqHero.jpg) 100% 50% no-repeat;
         background-size: cover;
     }
 }
 
 @media (min-width: 2000px) {
     .faqHero {
-        background: url(../images/faqHero.jpg) right top no-repeat;
-        background-size: cover
+        height: 50vh
     }
 }
 
@@ -570,6 +617,12 @@ a:hover {
 
 .inquiry-form {
     padding: 0em 2em
+}
+
+@media (min-width: 1024px) {
+    .inquiry-form {
+        padding: 0
+    }
 }
 
 .inquiry-form p {
@@ -697,22 +750,27 @@ a:hover {
 }
 
 .infoImage {
-    background: url(../images/infoMobile.jpg) left center no-repeat;
+    background: url(../images/infoMobile.jpg) left bottom no-repeat;
     background-size: cover;
-    height: 23em
+    height: 24em
 }
 
 @media (min-width: 375px) {
     .infoImage {
-        height: 28em
+        height: 30em
     }
 }
 
 @media (min-width: 768px) {
     .infoImage {
         background: url(../images/info.jpg) center bottom no-repeat;
-        background-size: cover;
-        height: 30em
+        background-size: cover
+    }
+}
+
+@media (min-width: 1024px) {
+    .infoImage {
+        height: 35em
     }
 }
 
@@ -806,12 +864,19 @@ a:hover {
 
 .steps h1 {
     font-size: 24px;
-    padding: 0 2em 2em
+    padding: 0 1.5em 2em
+}
+
+@media (min-width: 375px) {
+    .steps h1 {
+        padding: 0 25% 2em
+    }
 }
 
 @media (min-width: 768px) {
     .steps h1 {
-        font-size: 32px
+        font-size: 32px;
+        padding: 0 2em 2em
     }
 }
 
@@ -824,13 +889,13 @@ a:hover {
 
 .steps p {
     font-weight: 300;
-    padding: 0 2em;
+    padding: 0 2em 1em;
 }
 
 @media (min-width: 768px) {
     .steps p {
         font-size: 14px;
-        padding: 0 1em
+        padding: 0 1em 1em
     }
 }
 
@@ -847,6 +912,12 @@ a:hover {
         flex: 0 0 20%;
         max-width: 20%;
         height: auto
+    }
+}
+
+@media (min-width: 1200px) {
+    .step {
+        max-width: 15%
     }
 }
 
@@ -922,7 +993,8 @@ a:hover {
 
 @media (min-width: 768px) {
     .emailAddress {
-        margin: 1.5em 0
+        margin: 1.5em 0;
+        text-align: left
     }
 }
 
