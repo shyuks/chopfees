@@ -25,6 +25,12 @@ app.get('/about', function(req, res) {
     res.sendFile(path.join(__dirname, './public/about.html'));
 })
 
+app.post('/index.html', function(req, res) {
+
+    console.log('posting');
+
+});
+
 
 app.listen(8080, function() {
     console.log('Listening On http://localhost:8080/');
