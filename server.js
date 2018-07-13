@@ -25,17 +25,56 @@ app.get('/about', function(req, res) {
     res.sendFile(path.join(__dirname, './public/about.html'));
 })
 
-app.post('/index.html', function(req, res) {
+app.post('/', function(req, res) {
 
-    console.log('posting');
+    console.log('investor req:body; ', req.body);
+    // var email = {
+    //     emailAddress: '',
+    //     emailLength: 0 
+    // };
 
-});
+    // var info = {
+    //     firstName: '',
+    //     lastName: '',
+    //     inviteCode: '',
+    // };
+
+    // if (req.body.firstName !== undefined && req.body.lastName !== undefined) {
+    //     info.firstName = req.body.firstName;
+    //     info.lastName = req.body.lastName;
+    //     info.inviteCode = req.body.invite;
+    // }
+
+    // if (req.body.email !== undefined) {
+    //     email.emailAddress = req.body.email;
+    //     email.emailLength = req.body.email.length;
+    // };
+
+    // sendmail({
+    //     from: 'chopfees@chopfees.com',
+    //     to: 's.hong35@gmail.com',
+    //     subject: 'New Potential INVESTOR ' + info.firstName + ' ' + info.lastName,
+    //     html: "Hello, " + "<br><br>" + 'A new INVESTOR has submitted his information via joindoctorpedia.com.' + "<br><br>" +
+    //           "First Name: " + info.firstName + "<br>" +
+    //           "Last Name: " + info.lastName + "<br>" +
+    //           "Email: " + email.emailAddress + "<br>" +
+    //           "Invite Code: " + info.inviteCode + "<br><br>" +
+    //           "Automated message from joindoctorpedia.com."
+    // }), function(err, reply) {
+    //         console.log(err && err.stack);
+    //         console.dir(reply);
+    // }
+
+    setTimeout(function() {
+        return res.redirect('/');    
+    }, 8000)
+})
 
 
 app.listen(8080, function() {
     console.log('Listening On http://localhost:8080/');
 });
 
-// app.listen(8080, '192.241.231.251', function() {
-//     console.log('Listening On http://192.241.231.251:8080/');
+// app.listen(8080, '206.189.214.68', function() {
+//     console.log('Listening On http://206.189.214.68:8080/');
 // });

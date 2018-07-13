@@ -7,6 +7,7 @@
         <title>Chopfees</title>
         <meta name="description" content="Chopfees">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,300,500,600,700" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
@@ -75,31 +76,31 @@
                     <h1>Inquire Now</h1>
                     <div class="inquiry-form">
                         <form method="post">
-                            <div class="form-row">
+                            <div class="form-row form-body">
                                 <div class="col-md-12">
                                     <p>YOUR INFORMATION</p>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <input type="firstName" class="form-control" id="firstName" placeholder="First Name *">
+                                    <input type="text" name="firstName" class="form-control" id="firstName" placeholder="First Name *" required>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <input type="lastName" class="form-control" id="lastName" placeholder="Last Name *">
+                                    <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Last Name *" required>
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <input type="companyName" class="form-control" id="companyName" placeholder="Company Name">
+                                    <input type="text" name="companyName" class="form-control" id="companyName" placeholder="Company Name" >
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <input type="email" class="form-control" id="email" placeholder="Email *">
+                                    <input type="text" name="email" class="form-control" id="email" placeholder="Email *" required>
                                 </div>
                                 <div class="form-group col-md-6" style="margin-bottom:0">
-                                    <input type="phone" class="form-control" id="phone" placeholder="Phone *">
+                                    <input type="text" name="phone" class="form-control" id="phone" placeholder="Phone *" required>
                                 </div>
                                 <div class="col-md-12">
                                     <p>UPLOAD MERCHANT STATEMENT</p>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="inputBox">
-                                        <input type="file" name="file-7[]" id="file-7" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                                        <input type="file" name="file" id="file-7" class="inputfile" data-multiple-caption="{count} files selected" multiple />
                                         <label for="file-7">
                                             <strong>Choose file</strong>
                                             <span>no file selected</span>
@@ -107,10 +108,10 @@
                                     </div>
                                 </div>
                             </div>
-                            
                             <div class="submitButtonBox">
                                 <button type="submit" class="btn btn-primary btn-block form-btn">SUBMIT YOUR INFO</button>
                             </div>
+                            
                         </form>
                     </div>
                 </div>
@@ -172,7 +173,7 @@
             </section>
 
             <!-- Inquiry Form -->
-            <section class="inquiry">
+            <!-- <section class="inquiry">
             
                 <div class="sign-up">
                     <h1>Inquire Now</h1>
@@ -217,7 +218,7 @@
                         </form>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <!-- Footer -->
 
