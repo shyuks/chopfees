@@ -381,7 +381,8 @@ a:hover {
 /* Desktop Nav */
 
 .desktopNav {
-    padding: 2% 3%
+    padding: 2.5% 3% 2%;
+    background-color: rgba(74, 74, 74, 0.5)
 }
 
 @media (max-width: 767px) {
@@ -426,8 +427,7 @@ a:hover {
     .hero {
         background: url(../images/hero.jpg) 80% 100% no-repeat;
         background-size: cover;
-        height: 500px;
-        padding: 15px
+        height: 500px
     }
 }
 
