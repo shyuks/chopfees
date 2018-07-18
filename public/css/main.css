@@ -1034,3 +1034,25 @@ a:hover {
         margin-right: 9%
     }
 }
+
+#submissionModal .modal-header {
+    border-bottom: none
+}
+
+#submissionModal .modal-footer {
+    border-top: none
+}
+
+#submissionModal .modal-body {
+    text-align: center
+}
+
+#submissionModal .modal-body h2 {
+    font-size: 28px;
+    font-weight: 300
+}
+
+#submissionModal .modal-body p {
+    font-size: 14px;
+    font-weight: 300
+}

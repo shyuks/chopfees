@@ -29,33 +29,33 @@ app.post('/', function(req, res) {
 
     console.log('investor req:body; ', req.body);
 
-    var info = {
-        firstName: '',
-        lastName: '',
-        companyName: '',
-        emailAddress: '',
-        phone: '',
-        merchantStatement: ''
-    };
+    // var info = {
+    //     firstName: '',
+    //     lastName: '',
+    //     companyName: '',
+    //     emailAddress: '',
+    //     phone: '',
+    //     merchantStatement: ''
+    // };
 
-    if (req.body.firstName !== undefined && req.body.lastName !== undefined) {
-        info.firstName = req.body.firstName;
-        info.lastName = req.body.lastName;
-        info.companyName = req.body.companyName;
-        info.emailAddress = req.body.emailAddress;
-        info.phone = req.body.phone;
-        info.merchantStatement = req.body.merchantStatement;
-    };
+    // if (req.body.firstName !== undefined && req.body.lastName !== undefined) {
+    //     info.firstName = req.body.firstName;
+    //     info.lastName = req.body.lastName;
+    //     info.companyName = req.body.companyName;
+    //     info.emailAddress = req.body.emailAddress;
+    //     info.phone = req.body.phone;
+    //     info.merchantStatement = req.body.merchantStatement;
+    // };
 
-    var mail = require("nodemailer").mail;
+    // var mail = require("nodemailer").mail;
 
-    mail({
-        from: "Fred Foo ✔ <foo@blurdybloop.com>", // sender address
-        to: "s.hong35@gmail.com", // list of receivers
-        subject: "Hello ✔", // Subject line
-        text: "Hello world ✔", // plaintext body
-        html: "<b>Hello world ✔</b>" // html body
-    });
+    // mail({
+    //     from: "Fred Foo ✔ <foo@blurdybloop.com>", // sender address
+    //     to: "s.hong35@gmail.com", // list of receivers
+    //     subject: "Hello ✔", // Subject line
+    //     text: "Hello world ✔", // plaintext body
+    //     html: "<b>Hello world ✔</b>" // html body
+    // });
 
     // sendmail({
     //     from: 'chopfees@chopfees.com',
@@ -74,9 +74,9 @@ app.post('/', function(req, res) {
     //         console.dir(reply);
     // }
 
-    setTimeout(function() {
-        return res.redirect('/');    
-    }, 8000)
+    // setTimeout(function() {
+    //     return res.redirect('/');    
+    // }, 8000)
 })
 
 
