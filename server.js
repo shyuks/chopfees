@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
 var favicon = require('serve-favicon');
-var sendmail = require('sendmail')();
+var nodemailer = require('nodemailer')
 
 var app = express();
 
@@ -28,38 +28,47 @@ app.get('/about', function(req, res) {
 app.post('/', function(req, res) {
 
     console.log('investor req:body; ', req.body);
-    // var email = {
-    //     emailAddress: '',
-    //     emailLength: 0 
-    // };
 
-    // var info = {
-    //     firstName: '',
-    //     lastName: '',
-    //     inviteCode: '',
-    // };
+    var info = {
+        firstName: '',
+        lastName: '',
+        companyName: '',
+        emailAddress: '',
+        phone: '',
+        merchantStatement: ''
+    };
 
-    // if (req.body.firstName !== undefined && req.body.lastName !== undefined) {
-    //     info.firstName = req.body.firstName;
-    //     info.lastName = req.body.lastName;
-    //     info.inviteCode = req.body.invite;
-    // }
+    if (req.body.firstName !== undefined && req.body.lastName !== undefined) {
+        info.firstName = req.body.firstName;
+        info.lastName = req.body.lastName;
+        info.companyName = req.body.companyName;
+        info.emailAddress = req.body.emailAddress;
+        info.phone = req.body.phone;
+        info.merchantStatement = req.body.merchantStatement;
+    };
 
-    // if (req.body.email !== undefined) {
-    //     email.emailAddress = req.body.email;
-    //     email.emailLength = req.body.email.length;
-    // };
+    var mail = require("nodemailer").mail;
+
+    mail({
+        from: "Fred Foo ✔ <foo@blurdybloop.com>", // sender address
+        to: "s.hong35@gmail.com", // list of receivers
+        subject: "Hello ✔", // Subject line
+        text: "Hello world ✔", // plaintext body
+        html: "<b>Hello world ✔</b>" // html body
+    });
 
     // sendmail({
     //     from: 'chopfees@chopfees.com',
     //     to: 's.hong35@gmail.com',
-    //     subject: 'New Potential INVESTOR ' + info.firstName + ' ' + info.lastName,
-    //     html: "Hello, " + "<br><br>" + 'A new INVESTOR has submitted his information via joindoctorpedia.com.' + "<br><br>" +
+    //     subject: 'New Inquiry by ' + info.firstName + ' ' + info.lastName,
+    //     html: "Hello, " + "<br><br>" + 'A new inquiry was submitted on chopfees.com.' + "<br><br>" +
     //           "First Name: " + info.firstName + "<br>" +
     //           "Last Name: " + info.lastName + "<br>" +
-    //           "Email: " + email.emailAddress + "<br>" +
-    //           "Invite Code: " + info.inviteCode + "<br><br>" +
-    //           "Automated message from joindoctorpedia.com."
+    //           "Company Name: " + info.companyName + "<br>" +
+    //           "Email: " + info.emailAddress + "<br>" +
+    //           "Number: " + info.phone + "<br><br>" +
+    //           info.merchantStatement +
+    //           "Please check attachments for a merchant statement."
     // }), function(err, reply) {
     //         console.log(err && err.stack);
     //         console.dir(reply);

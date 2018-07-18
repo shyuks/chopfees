@@ -90,18 +90,18 @@
                                     <input type="text" name="companyName" class="form-control" id="companyName" placeholder="Company Name" >
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <input type="text" name="email" class="form-control" id="email" placeholder="Email *" required>
+                                    <input type="email" name="emailAddress" class="form-control" id="emailAddress" placeholder="Email *" required>
                                 </div>
                                 <div class="form-group col-md-6" style="margin-bottom:0">
-                                    <input type="text" name="phone" class="form-control" id="phone" placeholder="Phone *" required>
+                                    <input type="number" name="phone" class="form-control" id="phone" placeholder="Phone *" required>
                                 </div>
                                 <div class="col-md-12">
                                     <p>UPLOAD MERCHANT STATEMENT</p>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="inputBox">
-                                        <input type="file" name="file" id="file-7" class="inputfile" data-multiple-caption="{count} files selected" multiple />
-                                        <label for="file-7">
+                                        <input type="file" name="merchantStatement" id="file-1" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                                        <label for="file-1">
                                             <strong>Choose file</strong>
                                             <span>no file selected</span>
                                         </label>
@@ -122,11 +122,18 @@
                 <div class="col-md-12 infoText">
                     <h1>Free up more cash for your business</h1>
 
-                    <h2>Merchant Processing statements are designed to be confusing so that your business pays more in fees.</h2>
-                    <p>We have the expertise and insight to get your business the best possible program available to reduce your merchant processing expense.</p>
+                    <h2>Merchant Processing statements are designed to be
+                    confusing so that your business pays more in fees.</h2>
+                    <p>We have the expertise and insight to get your business
+                    the best possible program available to reduce your merchant
+                    processing expense.</p>
 
                     <h2>We work for you and are not a Merchant Processor.</h2>
-                    <p>With over 17 years in the Merchant Processing industry, we can professionally negotiate savings on your behalf to get your business the best possible rate from any processor—including your current provider. Our vested interest is to get you the best possible deal.</p>
+                    <p>With over 17 years in the Merchant Processing industry,
+                    we can professionally negotiate savings on your behalf to
+                    get your business the best possible rate from any
+                    processor—including your current provider. Our vested
+                    interest is to get you the best possible deal.</p>
 
                     <h2>There’s no risk!</h2>
                     <p>If we can’t save you money, you pay nothing!</p>
@@ -173,52 +180,52 @@
             </section>
 
             <!-- Inquiry Form -->
-            <!-- <section class="inquiry">
-            
-                <div class="sign-up">
-                    <h1>Inquire Now</h1>
-                    <div class="inquiry-form">
-                        <form method="post">
-                            <div class="form-row">
-                                <div class="col-md-12">
-                                    <p>YOUR INFORMATION</p>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <input type="firstName" class="form-control" id="firstName" placeholder="First Name *">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <input type="lastName" class="form-control" id="lastName" placeholder="Last Name *">
-                                </div>
-                                <div class="form-group col-md-12">
-                                    <input type="companyName" class="form-control" id="companyName" placeholder="Company Name">
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <input type="email" class="form-control" id="email" placeholder="Email *">
-                                </div>
-                                <div class="form-group col-md-6" style="margin-bottom:0">
-                                    <input type="phone" class="form-control" id="phone" placeholder="Phone *">
-                                </div>
-                                <div class="col-md-12">
-                                    <p>UPLOAD MERCHANT STATEMENT</p>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="inputBox">
-                                        <input type="file" name="file-7[]" id="file-7" class="inputfile" data-multiple-caption="{count} files selected" multiple />
-                                        <label for="file-7">
-                                            <strong>Choose file</strong>
-                                            <span>no file selected</span>
-                                        </label>
+            <section class="inquiry">
+                
+                    <div class="sign-up">
+                        <h1>Inquire Now</h1>
+                        <div class="inquiry-form">
+                            <form method="post">
+                                <div class="form-row form-body">
+                                    <div class="col-md-12">
+                                        <p>YOUR INFORMATION</p>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <input type="text" name="firstName" class="form-control" id="firstName" placeholder="First Name *" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <input type="text" name="lastName" class="form-control" id="lastName" placeholder="Last Name *" required>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <input type="text" name="companyName" class="form-control" id="companyName" placeholder="Company Name" >
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <input type="text" name="email" class="form-control" id="email" placeholder="Email *" required>
+                                    </div>
+                                    <div class="form-group col-md-6" style="margin-bottom:0">
+                                        <input type="text" name="phone" class="form-control" id="phone" placeholder="Phone *" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <p>UPLOAD MERCHANT STATEMENT</p>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="inputBox">
+                                            <input type="file" name="merchantStatement" id="file-2" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                                            <label for="file-2">
+                                                <strong>Choose file</strong>
+                                                <span>no file selected</span>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            
-                            <div class="submitButtonBox">
-                                <button type="submit" class="btn btn-primary btn-block form-btn">SUBMIT YOUR INFO</button>
-                            </div>
-                        </form>
+                                <div class="submitButtonBox">
+                                    <button type="submit" class="btn btn-primary btn-block form-btn">SUBMIT YOUR INFO</button>
+                                </div>
+                                
+                            </form>
+                        </div>
                     </div>
-                </div>
-            </section> -->
+                </section>
 
             <!-- Footer -->
 
