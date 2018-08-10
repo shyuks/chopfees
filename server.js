@@ -4,6 +4,8 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var favicon = require('serve-favicon');
 var nodemailer = require('nodemailer')
+var multer = require('multer');
+var upload = multer({ dest: 'upload/' });
 
 var app = express();
 
@@ -25,58 +27,74 @@ app.get('/about', function(req, res) {
     res.sendFile(path.join(__dirname, './public/about.html'));
 })
 
-app.post('/', function(req, res) {
+app.post('/', upload.single('merchantStatement'), function(req, res, next) {
 
-    console.log('investor req:body; ', req.body);
+    let info = {
+        firstName: '',
+        lastName: '',
+        companyName: '',
+        emailAddress: '',
+        phone: ''
+    };
 
-    // var info = {
-    //     firstName: '',
-    //     lastName: '',
-    //     companyName: '',
-    //     emailAddress: '',
-    //     phone: '',
-    //     merchantStatement: ''
-    // };
+    if (req.body.firstName !== undefined && req.body.lastName !== undefined) {
+        info.firstName = req.body.firstName;
+        info.lastName = req.body.lastName;
+        info.companyName = req.body.companyName;
+        info.emailAddress = req.body.emailAddress;
+        info.phone = req.body.phone;
+    };
 
-    // if (req.body.firstName !== undefined && req.body.lastName !== undefined) {
-    //     info.firstName = req.body.firstName;
-    //     info.lastName = req.body.lastName;
-    //     info.companyName = req.body.companyName;
-    //     info.emailAddress = req.body.emailAddress;
-    //     info.phone = req.body.phone;
-    //     info.merchantStatement = req.body.merchantStatement;
-    // };
+    let transporter = nodemailer.createTransport({
+        sendmail: true
+    });
 
-    // var mail = require("nodemailer").mail;
+    var mailOptions = '';
 
-    // mail({
-    //     from: "Fred Foo ✔ <foo@blurdybloop.com>", // sender address
-    //     to: "s.hong35@gmail.com", // list of receivers
-    //     subject: "Hello ✔", // Subject line
-    //     text: "Hello world ✔", // plaintext body
-    //     html: "<b>Hello world ✔</b>" // html body
-    // });
+    if (req.file !== undefined) {
+        mailOptions = {
+            from: 'webinquiry@chopfees.com',
+            to: 'alicia@chopfees.com, jon@chopfees.com',
+            subject: `New Inquiry by ${info.firstName} ${info.lastName} via Chopfees.com`,
+            html: "Hello, <br><br> A new inquiry was submitted on chopfees.com <br><br>" +
+                    `First Name: ${info.firstName} <br>` +
+                    `Last Name: ${info.lastName} <br>` +
+                    `Company Name: ${info.companyName} <br>` +
+                    `Email: ${info.emailAddress} <br>` +
+                    `Number: ${info.phone} <br><br>` +
+                    "Please check attachment for the client's merchant statement.",
+            attachments: [{
+                filename: req.file.originalname,
+                contentType: 'application/pdf',
+                path: req.file.path
+            }]
+        };
+    } else {
+        mailOptions = {
+            from: 'webinquiry@chopfees.com',
+            to: 'alicia@chopfees.com, jon@chopfees.com',
+            subject: `New Inquiry by ${info.firstName} ${info.lastName} via Chopfees.com`,
+            html: "Hello, <br><br> A new inquiry was submitted on chopfees.com <br><br>" +
+                    `First Name: ${info.firstName} <br>` +
+                    `Last Name: ${info.lastName} <br>` +
+                    `Company Name: ${info.companyName} <br>` +
+                    `Email: ${info.emailAddress} <br>` +
+                    `Number: ${info.phone} <br><br>` +
+                    `No merchant statement was attached by the client.`
+        };
+    }
 
-    // sendmail({
-    //     from: 'chopfees@chopfees.com',
-    //     to: 's.hong35@gmail.com',
-    //     subject: 'New Inquiry by ' + info.firstName + ' ' + info.lastName,
-    //     html: "Hello, " + "<br><br>" + 'A new inquiry was submitted on chopfees.com.' + "<br><br>" +
-    //           "First Name: " + info.firstName + "<br>" +
-    //           "Last Name: " + info.lastName + "<br>" +
-    //           "Company Name: " + info.companyName + "<br>" +
-    //           "Email: " + info.emailAddress + "<br>" +
-    //           "Number: " + info.phone + "<br><br>" +
-    //           info.merchantStatement +
-    //           "Please check attachments for a merchant statement."
-    // }), function(err, reply) {
-    //         console.log(err && err.stack);
-    //         console.dir(reply);
-    // }
+    transporter.sendMail(mailOptions, (err, info) => {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log(info);
+        }
+    });
 
-    // setTimeout(function() {
-    //     return res.redirect('/');    
-    // }, 8000)
+    setTimeout(function() {
+        return res.redirect('/');    
+    }, 8000)
 })
 
 
