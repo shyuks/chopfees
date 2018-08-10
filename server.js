@@ -6,6 +6,7 @@ var favicon = require('serve-favicon');
 var nodemailer = require('nodemailer')
 var multer = require('multer');
 var upload = multer({ dest: 'upload/' });
+var fs = require('fs');
 
 var app = express();
 
@@ -49,12 +50,10 @@ app.post('/', upload.single('merchantStatement'), function(req, res, next) {
         sendmail: true
     });
 
-    var mailOptions = '';
-
     if (req.file !== undefined) {
-        mailOptions = {
+        let mailOptions = {
             from: 'webinquiry@chopfees.com',
-            to: 'alicia@chopfees.com, jon@chopfees.com',
+            to: 's.hong35@gmail.com',
             subject: `New Inquiry by ${info.firstName} ${info.lastName} via Chopfees.com`,
             html: "Hello, <br><br> A new inquiry was submitted on chopfees.com <br><br>" +
                     `First Name: ${info.firstName} <br>` +
@@ -69,10 +68,25 @@ app.post('/', upload.single('merchantStatement'), function(req, res, next) {
                 path: req.file.path
             }]
         };
+
+        transporter.sendMail(mailOptions, (err, info) => {
+            let filename = req.file.filename;
+    
+            if (err) {
+                console.log(err);
+            } else {
+                fs.unlink(path.join(__dirname, './upload/', filename), function(error) {
+                    if (error) {
+                        console.log(error);
+                    }
+                })
+                console.log(info);
+            }
+        });
     } else {
-        mailOptions = {
+        let mailOptions = {
             from: 'webinquiry@chopfees.com',
-            to: 'alicia@chopfees.com, jon@chopfees.com',
+            to: 's.hong35@gmail.com',
             subject: `New Inquiry by ${info.firstName} ${info.lastName} via Chopfees.com`,
             html: "Hello, <br><br> A new inquiry was submitted on chopfees.com <br><br>" +
                     `First Name: ${info.firstName} <br>` +
@@ -82,15 +96,15 @@ app.post('/', upload.single('merchantStatement'), function(req, res, next) {
                     `Number: ${info.phone} <br><br>` +
                     `No merchant statement was attached by the client.`
         };
-    }
 
-    transporter.sendMail(mailOptions, (err, info) => {
-        if (err) {
-            console.log(err);
-        } else {
-            console.log(info);
-        }
-    });
+        transporter.sendMail(mailOptions, (err, info) => {    
+            if (err) {
+                console.log(err);
+            } else {
+                console.log(info);
+            }
+        });
+    }
 
     setTimeout(function() {
         return res.redirect('/');    
