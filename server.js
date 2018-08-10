@@ -10,7 +10,7 @@ var fs = require('fs');
 
 var app = express();
 
-app.use(favicon(path.join(__dirname, './public/images/favicon.png')))
+app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.png')))
 
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
